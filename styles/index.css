@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Primary */
+
+/* $Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%); */
+
+/* Neutral */
+
+/* - Grey 500: hsl(234, 12%, 34%)
+- Grey 400: hsl(212, 6%, 44%)
+- White: hsl(0, 0%, 100%) */
+
+.cyan {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.red {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.orange {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.blue {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    align-content: center;
+}
+
+h1 {
+    color: hsl(234, 12%, 34%);
+    font-size: x-large;
+    margin: 5px 0px;
+}
+
+p {
+    color: hsl(212, 6%, 44%);
+    margin: 5px 0px;
+}
+
+.wrapper-header {
+    margin: 60px 20px;
+}
+
+.desc {
+    color: hsl(234, 12%, 34%);
+    margin: 20px 0px;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    width: 18rem;
+    height: 12rem;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 20px hsl(207, 29%, 87%);
+
+    img {
+        width: 60px;
+        display: flex;
+        align-self: flex-end;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        width: 80%;
+        margin: auto;
+    }
+
+    .wrapper-header {
+        width: 50%;
+        margin: 40px auto 10px;
+    }
+
+    .card-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+        grid-template-rows: auto; /* One row */
+        grid-template-areas: 
+            "card1 card2 card4"
+            "card1 card3 card4"; /* Middle column stacked */
+        align-items: center; /* Centers first and third column */
+        gap: 5px;
+        height: 80vh; /* Ensures proper centering */
+    }
+
+    .card {
+        width: 20rem;
+    }
+
+    .card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .card:nth-child(2) {
+        grid-area: card2;
+        align-self: self-end;
+    }
+
+    .card:nth-child(3) {
+        grid-area: card3;
+        align-self: self-start;
+    }
+
+    .card:nth-child(4) {
+        grid-area: card4;
+    }
+}
